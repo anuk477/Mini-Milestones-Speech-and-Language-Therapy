@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="lcpApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to London Children's Practice</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/styles2.css">
+</head>
+<body class="home" ng-controller="MainCtrl as vm">
+  <header class="site-header section">
+    <div class="container">
+      <div class="site-header__wrapper">
+        <div class="site-header__logo-holder">
+          <a href="index.html">
+            <img src="/images/earthtones transparent 2.png" alt="London Children's Practice logo">
+          </a>
+        </div>
+        <div class="site-header__menu-holder">
+          <div class="menu-header-container">
+            <ul id="menu-header" class="menu">
+              <li ng-repeat="item in vm.navItems"
+                  ng-class="item.classes">
+                <a ng-href="{{item.href}}" target="_self">{{item.label}}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="burger-container">
+          <div class="burger">
+            <div class="burger-box">
+              <div class="burger-inner"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="site-body section">
+    <div class="template-inner section">
+      <section class="large-hero-area section block bg-grey">
+        <div class="container">
+          <div class="large-hero-area__wrapper">
+            <div class="large-hero-area__content-holder">
+              <h1>Proudly providing services to children &amp; young people for over 15 years.</h1>
+            </div>
+            <div class="large-hero-area__image-holder">
+              <img src="https://www.londonchildrenspractice.com/wp-content/uploads/2023/11/Group-746.png" alt="Therapists supporting children">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="centered-content section bg-white">
+        <div class="container">
+          <div class="centered-content__wrapper content">
+            <h3>Welcome to The London Children's Practice</h3>
+            <p><strong>The London Children's Practice is a thriving multidisciplinary practice, providing services to children, young people and families in London and internationally for over 15 years.</strong></p>
+            <p>Our therapy is underpinned by our company values of Growth, Collaboration, Diversity and Care. We offer a variety of therapeutic services and assessments tailored to meet the needs of all service users.</p>
+            <p>We have a central clinic in Sloane Square, London offering assessment and therapy to children and young people. We work with mainstream and specialist schools offering services in tailored packages to support individual students and the school as a whole. We support a number of Local Authorities, providing packages of assessments and therapeutic input. To find out more, please <a href="contact.html" target="_self">get in touch</a>.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="banner-with-ctas section block">
+        <div class="container">
+          <div class="banner-with-ctas__wrapper bg-dark-blue">
+            <div class="banner-with-ctas__content-holder">
+              <h3>Are you worried about your child's development?</h3>
+              <div class="content">
+                <p>Our Introductory Therapy Package offers an affordable starting point for therapy, with two initial sessions, including a comprehensive assessment and a feedback/target-setting session, all for just &pound;220.</p>
+              </div>
+              <div class="banner-with-ctas__btn-holder">
+                <a class="btn btn--white" href="https://www.londonchildrenspractice.com/services/therapy-intervention-package/" target="_self"><span>Find out more</span></a>
+              </div>
+            </div>
+            <div class="banner-with-ctas__image-holder">
+              <img src="https://www.londonchildrenspractice.com/wp-content/uploads/2024/10/Group-761.png" alt="Therapist working with child">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="services-slider section block">
+        <div class="container">
+          <div class="services-slider__wrapper">
+            <a href="https://www.londonchildrenspractice.com/services/" class="services-slider__content-holder">
+              <h2>Services</h2>
+              <p>We are very proud to have a skilled team of therapists offering a broad range of services.</p>
+              <svg width="116" height="78" viewBox="0 0 116 78" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M114.002 39.5703C113.837 39.0404 113.017 38.5302 112.48 38.6316C112.28 38.6677 111.572 38.9415 110.888 39.2477C108.321 40.4196 105.675 40.6645 99.9924 40.2853C96.1833 40.0214 95.4083 40.0783 95.1101 40.6472C94.7705 41.2951 94.9986 41.8979 95.7569 42.2953C96.626 42.7507 97.5328 42.9035 101 43.1291C102.538 43.2301 103.692 43.3719 103.571 43.4493C103.103 43.7276 98.3182 45.6714 96.2938 46.3829C93.4655 47.3986 91.2772 47.9234 88.6306 48.2081C82.2098 48.892 75.8205 47.9406 70.4253 45.4761C68.527 44.6021 65.7669 42.874 64.3531 41.69L63.5992 41.0533L64.7644 38.9449C65.9966 36.6702 66.6335 35.0705 67.0892 32.9325C68.294 27.4815 67.0216 21.3769 64.0413 18.2243C61.9296 15.9897 58.7381 15.5461 56.624 17.1974C55.9195 17.7347 55.6817 18.0732 54.9366 19.4954C54.1989 20.9417 54.0551 21.3697 53.8365 22.786C53.2558 26.8924 54.2475 31.8027 56.5061 35.987C57.323 37.5026 58.6577 39.4912 59.5087 40.4808C60.0315 41.0971 60.0307 41.1369 59.6793 41.5772C59.0914 42.2762 57.2266 43.8366 56.0953 44.5731C51.3202 47.6902 46.0496 48.3319 40.171 46.5205C38.9573 46.1463 38.0876 45.7308 36.2877 44.7069C33.7616 43.2626 32.205 42.044 30.6588 40.2672L29.7213 39.212L30.0412 37.9094C30.6798 35.3839 30.2439 32.2957 29.031 30.6129C28.3079 29.6096 27.6925 29.2468 26.7896 29.3175C25.4154 29.4029 24.6303 30.4015 24.5413 32.1473C24.4853 33.4069 25.363 36.3443 26.311 38.1098C27.0514 39.4643 27.0173 39.5675 25.5256 41.2228C24.3026 42.596 23.1956 43.3249 21.558 43.8364C17.0547 45.2429 8.73597 43.361 3.95967 39.8312C3.12524 39.2327 2.32899 38.7149 2.17769 38.6961C1.75574 38.6561 1.47103 39.3528 1.6516 39.931C2.68955 43.254 10.8712 46.8967 17.5242 46.9993C20.4279 47.0306 23.3629 46.2725 25.1347 45.0056C26.2348 44.2127 27.7716 42.7019 28.0947 42.0854C28.227 41.8328 28.4147 41.6288 28.5026 41.6145C28.6064 41.6085 29.0532 42.024 29.5304 42.5358C31.8048 45.0368 35.5799 47.5185 38.8698 48.6581C46.955 51.485 54.4442 49.9916 60.5532 44.2907C61.2435 43.6657 61.8281 43.1262 61.868 43.127C61.9164 43.1118 62.7033 43.6854 63.6468 44.4215C65.841 46.115 69.7433 48.2001 72.3595 49.0877C78.5358 51.1762 85.7005 51.6474 91.9331 50.3616C94.713 49.7843 99.7098 48.012 103.028 46.4074C104.26 45.8244 104.549 45.7342 104.279 46.0562C101.695 48.9514 100.861 50.8108 101.756 51.6019C102.58 52.3356 103.097 52.0023 105.222 49.3697C107.052 47.1064 109.77 44.3412 112.146 42.3438C113.776 40.9624 114.228 40.2926 114.002 39.5703ZM61.7092 38.8946C61.4926 38.9625 59.7199 36.5028 58.8637 34.9465C57.5985 32.6723 56.6244 29.7652 56.3576 27.4302C56.172 25.8625 56.2769 23.2791 56.612 22.025C57.1887 19.8096 58.2876 18.6733 59.7858 18.7738C61.6348 18.8967 63.0651 20.472 64.0934 23.4678C65.317 27.0899 65.233 31.094 63.8434 34.9375C63.3885 36.1898 61.974 38.8121 61.7092 38.8946ZM27.7901 35.8637C26.8768 33.9551 26.4475 31.3538 27.0954 31.6932C27.4431 31.8753 28.0325 34.0171 28.0294 35.0225C28.0218 36.2671 27.9888 36.3302 27.7901 35.8637Z" fill="white"/>
+              </svg>
+            </a>
+            <div class="services-slider__slider-wrapper">
+              <div class="services-slider__slider-holder">
+                <a class="services-slider__item" ng-repeat="service in vm.services" ng-href="{{service.href}}" target="_self">
+                  <h3>{{service.title}}</h3>
+                  <div class="info">
+                    <p>{{service.age}}</p>
+                    <p>{{service.category}}</p>
+                  </div>
+                  <p>{{service.description}}</p>
+                  <span>Learn More</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="image-ctas section">
+        <div class="container">
+          <div class="image-ctas__top content">
+            <h2>Who We Support</h2>
+            <p>We are proud to work with and alongside schools, families and Local Authorities, to seek the best outcomes for children and young people.</p>
+          </div>
+          <div class="image-ctas__wrapper">
+            <a class="image-ctas__item" ng-repeat="cta in vm.imageCtas" ng-href="{{cta.href}}" target="_self">
+              <img ng-src="{{cta.image}}" alt="{{cta.title}}">
+              <h3>{{cta.title}}</h3>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- <section class="image-and-content section block bg-purple">
+        <div class="container container--small">
+          <div class="image-and-content__wrapper">
+            <div class="image-and-content__image-holder">
+              <img src="https://www.londonchildrenspractice.com/wp-content/uploads/2023/11/Group-751.png" alt="Therapy team illustration">
+            </div>
+            <div class="image-and-content__content-holder">
+              <h2>Meet the Team</h2>
+              <div class="content">
+                <p>Our team stem from all corners of the world, bringing with them a variety of knowledge and skills making us a very diverse multidisciplinary practice. Regardless of our individual roles, we are united in a shared effort to support the children and young people in our community.</p>
+              </div>
+              <a class="btn btn--white" href="https://www.londonchildrenspractice.com/team/" target="_self"><span>Meet the Team</span></a>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <section class="icon-columns section block">
+        <div class="container">
+          <div class="icon-columns__top content">
+            <h2>Our Company Values</h2>
+            <p>Our values are the bedrock of everything we do. They are principles that sit at the heart of our decision making, and they form the framework for the support we offer.</p>
+          </div>
+          <div class="icon-columns__wrapper">
+            <div class="icon-columns__item" ng-repeat="value in vm.values">
+              <div class="icon-columns__image-holder">
+                <img ng-src="{{value.image}}" alt="{{value.title}}">
+              </div>
+              <div class="icon-columns__content-holder">
+                <h3>{{value.title}}</h3>
+                <div class="content">
+                  <p>{{value.description}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- <section class="content-and-ctas section">
+        <div class="container container--small">
+          <div class="content-and-ctas__wrapper">
+            <div class="content-and-ctas__content-holder">
+              <h2>Work with Us</h2>
+              <div class="content content--white">
+                <p>We are always looking for talented people who can help broaden the horizons of children and young people. If you are a committed, compassionate, enthusiastic person, with a drive to make a genuine impact on a young person's life, we would love to hear from you. We also hold a license to sponsor therapists that hold a HCPC registration.</p>
+                <p><strong>To apply please send your CV to <a href="mailto:office@londonchildrenspractice.com">office@londonchildrenspractice.com</a></strong></p>
+              </div>
+              <a class="btn" href="https://www.londonchildrenspractice.com/jobs/" target="_self"><span>Learn More</span></a>
+            </div>
+            <div class="content-and-ctas__adverts">
+              <a class="content-and-ctas__advert" ng-repeat="role in vm.jobAdverts" ng-href="{{role.href}}">
+                <h3>{{role.title}}</h3>
+                <p>{{role.description}}</p>
+                <span>Learn More</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <section class="footer-cta section bg-dark-blue">
+        <div class="container container--small">
+          <div class="inner">
+            <div class="left">
+              <h3>Contact Us</h3>
+              <div class="bottom">
+                <p>Got questions or queries, or simply want to know more about what we do? We look forward to hearing from you!</p>
+                <a class="btn" href="contact.html" target="_self"><span>Contact Us</span></a>
+              </div>
+            </div>
+            <div class="right">
+              <img src="https://www.londonchildrenspractice.com/wp-content/uploads/2023/11/Group-1.png" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <footer class="site-footer section">
+    <div class="container">
+      <div class="site-footer__wrapper">
+        <div class="site-footer__logo-holder">
+          <a href="index.html">
+            <img src="/images/earthtones transparent 2.png" alt="London Children's Practice">
+          </a>  
+        </div>
+        <div class="site-footer__menu-holder">
+          <div class="site-footer__top-menu">
+            <ul id="menu-footer" class="menu">
+              <li ng-repeat="item in vm.footerMenu" class="menu-item">
+                <a ng-href="{{item.href}}" target="_self">{{item.label}}</a>
+              </li>
+            </ul>
+          </div>
+          <div class="site-footer__bottom-menu">
+            <ul id="menu-compliance" class="menu">
+              <li ng-repeat="item in vm.complianceMenu" class="menu-item">
+                <a ng-href="{{item.href}}" target="_blank" rel="noopener">{{item.label}}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="site-footer__social-holder">
+          <a ng-repeat="social in vm.socialLinks" ng-href="{{social.href}}" target="_blank" rel="noopener" aria-label="{{social.label}}">
+            <svg ng-if="social.id === 'instagram'" width="58" height="56" viewBox="0 0 58 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.96221 31.8035C1.9483 21.8687 8.30761 13.6873 18.2424 9.67336C28.1778 5.65919 43.5955 5.04215 47.6094 14.9769C51.6233 24.9117 43.4444 44.1799 33.5096 48.1938C23.5749 52.2077 9.97612 41.7383 5.96221 31.8035Z" fill="#E5CCB4"/>
+              <path d="M33.3055 19.439C32.5116 19.439 31.8678 20.0827 31.8678 20.8766C31.8678 21.6706 32.5116 22.3143 33.3055 22.3143C34.0994 22.3143 34.7432 21.6706 34.7432 20.8766C34.7432 20.0827 34.0994 19.439 33.3055 19.439Z" fill="white"/>
+              <path d="M26.914 21.2827C23.5837 21.2827 20.8743 23.9921 20.8743 27.3224C20.8743 30.6526 23.5837 33.362 26.914 33.362C30.2443 33.362 32.9537 30.6526 32.9537 27.3224C32.9537 23.9921 30.2443 21.2827 26.914 21.2827ZM26.914 31.1919C24.7811 31.1919 23.0458 29.4553 23.0458 27.3224C23.0458 25.1895 24.7811 23.4542 26.914 23.4542C29.0469 23.4542 30.7821 25.1895 30.7821 27.3224C30.7821 29.4553 29.0469 31.1919 26.914 31.1919Z" fill="white"/>
+              <path d="M31.7091 39.5849H21.9171C17.8558 39.5849 14.5513 36.2804 14.5513 32.2192V22.4273C14.5513 18.3646 17.8558 15.0601 21.9171 15.0601H31.7091C35.7704 15.0601 39.0749 18.3646 39.0749 22.4273V32.2192C39.0749 36.2804 35.7704 39.5849 31.7091 39.5849ZM21.9171 17.3675C19.1275 17.3675 16.8587 19.6377 16.8587 22.4273V32.2192C16.8587 35.0087 19.1275 37.2775 21.9171 37.2775H31.7091C34.4986 37.2775 36.7689 35.0087 36.7689 32.2192V22.4273C36.7689 19.6377 34.4986 17.3675 31.7091 17.3675H21.9171Z" fill="white"/>
+            </svg>
+            <svg ng-if="social.id === 'facebook'" width="60" height="61" viewBox="0 0 60 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20.9014 9.34815C29.6787 3.20227 39.0809 7.55818 45.2268 16.3354C51.3731 25.1132 55.4425 39.9969 46.6653 46.1428C37.8881 52.2886 17.2739 48.6538 11.128 39.8766C4.98211 31.0994 12.1242 15.494 20.9014 9.34815Z" fill="#E2D1D8"/>
+              <path d="M31.3528 41.5846V28.664H35.6614L36.4815 23.3183H31.3528V19.8504C31.3528 18.3878 32.0695 16.9614 34.3658 16.9614H36.6968V12.4116C36.6968 12.4116 34.5812 12.0498 32.5587 12.0498C28.3345 12.0498 25.5746 14.6098 25.5746 19.244V23.3183H20.8784V28.664H25.5746V41.5846" fill="white"/>
+            </svg>
+            <svg ng-if="social.id === 'twitter'" width="59" height="58" viewBox="0 0 59 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M47.3504 42.8424C42.6533 52.473 32.3181 53.2216 22.6875 48.5244C13.0563 43.827 2.28129 32.7823 6.97844 23.1517C11.6756 13.5211 31.4674 6.70625 41.098 11.4034C50.7286 16.1005 52.0476 33.2118 47.3504 42.8424Z" fill="#EAE4A2"/>
+              <path d="M30.801 29.1505L38.8291 20.0186H36.9267L29.9559 27.9477L24.3882 20.0186H17.9667L26.386 32.0088L17.9667 41.585H19.8692L27.2306 33.2116L33.1104 41.585H39.532L30.801 29.1505ZM28.1952 32.1144L27.3421 30.9205L20.5547 21.42H23.4769L28.9544 29.0872L29.8075 30.2812L36.9276 40.2473H34.0054L28.1952 32.1144Z" fill="white"/>
+            </svg>
+            <span class="sr-only">{{social.label}}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://www.londonchildrenspractice.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+  <script src="https://www.londonchildrenspractice.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+  <script src="https://www.londonchildrenspractice.com/wp-content/themes/LCP-main/assets/compiled/main.min.js?ver=1760609167"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

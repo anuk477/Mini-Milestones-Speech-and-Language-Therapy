@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="lcpApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | London Children's Practice</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/styles2.css">
+</head>
+<body class="services" ng-controller="MainCtrl as vm">
+  <header class="site-header section">
+    <div class="container">
+      <div class="site-header__wrapper">
+        <div class="site-header__logo-holder">
+          <a href="index.html">
+            <img src="/images/earthtones transparent 2.png" alt="London Children's Practice logo">
+          </a>
+        </div>
+        <div class="site-header__menu-holder">
+          <div class="menu-header-container">
+            <ul id="menu-header" class="menu">
+              <li ng-repeat="item in vm.navItems"
+                  ng-class="item.classes">
+                <a ng-href="{{item.href}}" target="_self">{{item.label}}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="burger-container">
+          <div class="burger">
+            <div class="burger-box">
+              <div class="burger-inner"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- <div class="site-body section">
+    <div class="template-inner section">
+      <section class="large-hero-area section block bg-grey">
+        <div class="container">
+          <div class="large-hero-area__wrapper">
+            <div class="large-hero-area__content-holder">
+              <h1>Specialist support tailored to every child and young person.</h1>
+              <p>Our multidisciplinary team delivers joined-up assessments, therapy, and consultancy designed to meet the needs of families, schools, and Local Authorities.</p>
+            </div>
+            <div class="large-hero-area__image-holder">
+              <img src="https://www.londonchildrenspractice.com/wp-content/uploads/2023/11/Group-746.png" alt="Therapists supporting children">
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- <section class="centered-content section bg-white">
+        <div class="container">
+          <div class="centered-content__wrapper content">
+            <h3>How we can help</h3>
+            <p><strong>London Children's Practice delivers holistic, evidence-based support across Speech and Language Therapy, Occupational Therapy, Educational Psychology, Creative Therapies and more.</strong></p>
+            <p>We partner with families, mainstream and specialist schools, and Local Authorities to design targeted packages that unlock progress and meet statutory responsibilities. Explore our full offer below or <a href="contact.html" target="_self">reach out to discuss a bespoke plan</a>.</p>
+          </div>
+        </div>
+      </section> -->
+
+      <section class="services-cards section bg-white">
+        <div class="container">
+          <div class="services-cards__intro content">
+            <h2>All services at a glance</h2>
+            <p>Browse our full catalogue of assessments, interventions and consultancy offers. Each card links through to detailed information and referral routes.</p>
+          </div>
+          <div class="services-cards__wrapper">
+            <article class="service-card">
+              <h3>Screening</h3>
+              <p class="service-card__description">Brief, informal checks that help determine whether speech and language therapy may be beneficial for your child. If further support is recommended, we will guide you toward a full assessment or offer suggestions for strategies you can use at home.</p>
+            </article>
+            <article class="service-card">
+              <h3>Assessment</h3>
+              <p class="service-card__description">A comprehensive assessment offers an in-depth understanding of your child’s speech, language, and communication profile. It highlights both strengths and areas of need, using observation, standardised tools, and collaboration with families and educators. The goal is to build a full picture of your child’s communication skills and identify a clear path forward for therapy. Every assessment includes clear recommendations and a personalised therapy plan.</p>
+            </article>
+            <article class="service-card">
+              <h3>Therapy</h3>
+              <p class="service-card__description">Therapy is available in both 1:1 and group formats, with sessions tailored to meet the unique needs of each child or young person. We offer 30, 45, or 60-minute sessions online (teletherapy), at home, or at a community location such as nursery or school.</p>
+            </article>
+            <article class="service-card">
+              <h3>Consultation &amp; Advice</h3>
+              <p class="service-card__description">We offer support and advice to families, educators, and schools on strategies to support communication skills at home or in school.</p>
+            </article>
+            <article class="service-card">
+              <h3>Training &amp; Workshops</h3>
+              <p class="service-card__description">We deliver workshops or training sessions (both in-person and online) to help school staff and professionals support children with speech, language, and communication needs (SLCN).</p>
+            </article>
+            <article class="service-card">
+              <h3>School-Based Services</h3>
+              <p class="service-card__description">We bring our expertise into schools and nurseries; offering on-site therapy, screenings, reports, and staff training to support communication development in the classroom and wider school environments.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="footer-cta section bg-taupe">
+        <div class="container container--small">
+          <div class="inner">
+            <div class="left">
+              <h3>Contact Us</h3>
+              <div class="bottom">
+                <p>Got questions or queries, or simply want to know more about what we do? We look forward to hearing from you!</p>
+                <a class="btn" href="contact.html" target="_self"><span>Contact Us</span></a>
+              </div>
+            </div>
+            <div class="right">
+              <img src="https://www.londonchildrenspractice.com/wp-content/uploads/2023/11/Group-1.png" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    </div>
+  </div>
+
+  <footer class="site-footer section">
+    <div class="container">
+      <div class="site-footer__wrapper">
+        <div class="site-footer__brand">
+          <div class="site-footer__logo-holder">
+            <img src="/images/earthtones transparent 2.png" alt="London Children's Practice logo">
+          </div>
+          <div class="site-footer__menu-holder">
+            <div class="site-footer__top-menu">
+              <ul id="menu-footer" class="menu">
+                <li ng-repeat="item in vm.footerMenu" class="menu-item">
+                  <a ng-href="{{item.href}}" target="_self">{{item.label}}</a>
+                </li>
+              </ul>
+            </div>
+            <div class="site-footer__bottom-menu" ng-if="vm.complianceMenu.length">
+              <ul id="menu-compliance" class="menu">
+                <li ng-repeat="item in vm.complianceMenu" class="menu-item">
+                  <a ng-href="{{item.href}}" target="_blank" rel="noopener">{{item.label}}</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="site-footer__social-holder">
+          <a ng-repeat="social in vm.socialLinks" ng-href="{{social.href}}" target="_blank" rel="noopener" aria-label="{{social.label}}">
+            <svg ng-if="social.id === 'instagram'" width="58" height="56" viewBox="0 0 58 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.96221 31.8035C1.9483 21.8687 8.30761 13.6873 18.2424 9.67336C28.1778 5.65919 43.5955 5.04215 47.6094 14.9769C51.6233 24.9117 43.4444 44.1799 33.5096 48.1938C23.5749 52.2077 9.97612 41.7383 5.96221 31.8035Z" fill="#E5CCB4"/>
+              <path d="M33.3055 19.439C32.5116 19.439 31.8678 20.0827 31.8678 20.8766C31.8678 21.6706 32.5116 22.3143 33.3055 22.3143C34.0994 22.3143 34.7432 21.6706 34.7432 20.8766C34.7432 20.0827 34.0994 19.439 33.3055 19.439Z" fill="white"/>
+              <path d="M26.914 21.2827C23.5837 21.2827 20.8743 23.9921 20.8743 27.3224C20.8743 30.6526 23.5837 33.362 26.914 33.362C30.2443 33.362 32.9537 30.6526 32.9537 27.3224C32.9537 23.9921 30.2443 21.2827 26.914 21.2827ZM26.914 31.1919C24.7811 31.1919 23.0458 29.4553 23.0458 27.3224C23.0458 25.1895 24.7811 23.4542 26.914 23.4542C29.0469 23.4542 30.7821 25.1895 30.7821 27.3224C30.7821 29.4553 29.0469 31.1919 26.914 31.1919Z" fill="white"/>
+              <path d="M31.7091 39.5849H21.9171C17.8558 39.5849 14.5513 36.2804 14.5513 32.2192V22.4273C14.5513 18.3646 17.8558 15.0601 21.9171 15.0601H31.7091C35.7704 15.0601 39.0749 18.3646 39.0749 22.4273V32.2192C39.0749 36.2804 35.7704 39.5849 31.7091 39.5849ZM21.9171 17.3675C19.1275 17.3675 16.8587 19.6377 16.8587 22.4273V32.2192C16.8587 35.0087 19.1275 37.2775 21.9171 37.2775H31.7091C34.4986 37.2775 36.7689 35.0087 36.7689 32.2192V22.4273C36.7689 19.6377 34.4986 17.3675 31.7091 17.3675H21.9171Z" fill="white"/>
+            </svg>
+            <svg ng-if="social.id === 'facebook'" width="60" height="61" viewBox="0 0 60 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20.9014 9.34815C29.6787 3.20227 39.0809 7.55818 45.2268 16.3354C51.3731 25.1132 55.4425 39.9969 46.6653 46.1428C37.8881 52.2886 17.2739 48.6538 11.128 39.8766C4.98211 31.0994 12.1242 15.494 20.9014 9.34815Z" fill="#E2D1D8"/>
+              <path d="M31.3528 41.5846V28.664H35.6614L36.4815 23.3183H31.3528V19.8504C31.3528 18.3878 32.0695 16.9614 34.3658 16.9614H36.6968V12.4116C36.6968 12.4116 34.5812 12.0498 32.5587 12.0498C28.3345 12.0498 25.5746 14.6098 25.5746 19.244V23.3183H20.8784V28.664H25.5746V41.5846" fill="white"/>
+            </svg>
+            <svg ng-if="social.id === 'twitter'" width="59" height="58" viewBox="0 0 59 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M47.3504 42.8424C42.6533 52.473 32.3181 53.2216 22.6875 48.5244C13.0563 43.827 2.28129 32.7823 6.97844 23.1517C11.6756 13.5211 31.4674 6.70625 41.098 11.4034C50.7286 16.1005 52.0476 33.2118 47.3504 42.8424Z" fill="#EAE4A2"/>
+              <path d="M30.801 29.1505L38.8291 20.0186H36.9267L29.9559 27.9477L24.3882 20.0186H17.9667L26.386 32.0088L17.9667 41.585H19.8692L27.2306 33.2116L33.1104 41.585H39.532L30.801 29.1505ZM28.1952 32.1144L27.3421 30.9205L20.5547 21.42H23.4769L28.9544 29.0872L29.8075 30.2812L36.9276 40.2473H34.0054L28.1952 32.1144Z" fill="white"/>
+            </svg>
+            <span class="sr-only">{{social.label}}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://www.londonchildrenspractice.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+  <script src="https://www.londonchildrenspractice.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+  <script src="https://www.londonchildrenspractice.com/wp-content/themes/LCP-main/assets/compiled/main.min.js?ver=1760609167"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
+
