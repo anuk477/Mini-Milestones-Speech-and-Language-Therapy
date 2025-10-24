@@ -10,6 +10,7 @@
 
   function MainCtrl($timeout) {
     var vm = this;
+    var mobileMenuInitialised = false;
 
     vm.navItems = [
       {
@@ -261,6 +262,7 @@
     ];
 
     $timeout(initialiseSlider, 0, false);
+    $timeout(setupMobileMenu, 0, false);
 
     function initialiseSlider() {
       if (!window.jQuery || !jQuery.fn || !jQuery.fn.slick) {
@@ -292,6 +294,82 @@
           { breakpoint: 600, settings: { slidesToShow: 1 } }
         ]
       });
+    }
+
+    function setupMobileMenu() {
+      if (mobileMenuInitialised) {
+        return;
+      }
+
+      var burger = document.querySelector('.burger');
+      var menuHolder = document.getElementById('primary-navigation');
+
+      if (!burger || !menuHolder) {
+        $timeout(setupMobileMenu, 200, false);
+        return;
+      }
+
+      var burgerBox = burger.querySelector('.burger-box');
+      var menuLinks = menuHolder.querySelectorAll('a');
+      var isMenuOpen = menuHolder.classList.contains('open');
+
+      function setMenuState(shouldOpen) {
+        isMenuOpen = shouldOpen;
+        menuHolder.classList.toggle('open', isMenuOpen);
+        document.body.classList.toggle('mobile-menu-open', isMenuOpen);
+
+        if (burgerBox) {
+          burgerBox.classList.toggle('burger-box--is-active', isMenuOpen);
+        }
+
+        burger.classList.toggle('burger--active', isMenuOpen);
+        burger.setAttribute('aria-expanded', isMenuOpen ? 'true' : 'false');
+      }
+
+      function toggleMenu(event) {
+        if (event) {
+          event.preventDefault();
+        }
+        setMenuState(!isMenuOpen);
+      }
+
+      function handleMenuLinkClick() {
+        if (isMenuOpen) {
+          setMenuState(false);
+        }
+      }
+
+      function handleDocumentKeydown(event) {
+        if (event.key === 'Escape' && isMenuOpen) {
+          event.preventDefault();
+          setMenuState(false);
+          burger.focus();
+        }
+      }
+
+      function handleBurgerKeydown(event) {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          toggleMenu();
+        }
+      }
+
+      function handleResize() {
+        if (window.innerWidth >= 980 && isMenuOpen) {
+          setMenuState(false);
+        }
+      }
+
+      burger.addEventListener('click', toggleMenu);
+      burger.addEventListener('keydown', handleBurgerKeydown);
+      document.addEventListener('keydown', handleDocumentKeydown);
+      window.addEventListener('resize', handleResize);
+
+      Array.prototype.forEach.call(menuLinks, function (link) {
+        link.addEventListener('click', handleMenuLinkClick);
+      });
+
+      mobileMenuInitialised = true;
     }
   }
 })();

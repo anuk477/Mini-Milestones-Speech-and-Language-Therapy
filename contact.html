@@ -17,7 +17,7 @@
             <img src="images/earthtones-transparent-2.png" alt="London Children's Practice logo">
           </a>
         </div>
-        <div class="site-header__menu-holder">
+        <div class="site-header__menu-holder" id="primary-navigation" role="navigation" aria-label="Main menu">
           <div class="menu-header-container">
             <ul id="menu-header" class="menu">
               <li ng-repeat="item in vm.navItems"
@@ -28,11 +28,12 @@
           </div>
         </div>
         <div class="burger-container">
-          <div class="burger">
-            <div class="burger-box">
-              <div class="burger-inner"></div>
-            </div>
-          </div>
+          <button type="button" class="burger" aria-controls="primary-navigation" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="burger-box" aria-hidden="true">
+              <span class="burger-inner"></span>
+            </span>
+          </button>
         </div>
       </div>
     </div>
@@ -171,5 +172,4 @@
   <script src="js/contact-form.js"></script>
 </body>
 </html>
-
 
